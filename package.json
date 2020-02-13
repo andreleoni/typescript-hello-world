@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "sucrase-node src/index.ts",
-    "build": ""
+    "dev": "nodemon src/server.ts",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports"
   },
   "devDependencies": {
+    "nodemon": "^2.0.2",
     "sucrase": "^3.12.1",
     "typescript": "^3.7.5"
   }
